@@ -4,12 +4,6 @@ permalink: /about/
 layout: page
 published: true
 ---
----
-title: "About"
-permalink: "/about/"
-layout: page
----
-
 Hi there. 
 
 I am a Ph.D student and grateful to work at the intersection of engineering, statistics, computer science, and machine learning. 
