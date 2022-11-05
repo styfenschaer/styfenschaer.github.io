@@ -4,9 +4,15 @@ permalink: /about/
 layout: page
 published: true
 ---
+---
+title: "About"
+permalink: "/about/"
+layout: page
+---
+
 Hi there. 
 
-I am a PhD student and grateful to work at the intersection of engineering, statistics, computer science, and machine learning. 
+I am a Ph.D student and grateful to work at the intersection of engineering, statistics, computer science, and machine learning. 
 In this blog, I will mainly share with you my enthusiasm for programming and algorithms. 
 I'm particularly concerned that most of what we'll be doing will have a high carryover for your projects. 
 No explanations at oversimplified examples. No tutorials of stuff that hundreds of people have already explained much better than I ever could. Unfortunately, this also means that this blog is mainly aimed at advanced programmers. 
