@@ -1,99 +1,25 @@
 ---
-title: "About"
-permalink: "/about/"
+title: About
+permalink: /about/
 layout: page
+published: true
 ---
+Hi there. 
 
-## Installation
+I am a PhD student and grateful to work at the intersection of engineering, statistics, computer science, and machine learning. 
+In this blog, I will mainly share with you my enthusiasm for programming and algorithms. 
+I'm particularly concerned that most of what we'll be doing will have a high carryover for your projects. 
+No explanations at oversimplified examples. No tutorials of stuff that hundreds of people have already explained much better than I ever could. Unfortunately, this also means that this blog is mainly aimed at advanced programmers. 
+A few items I have planned for you are:
 
-Just fork this [repository](https://github.com/niklasbuschmann/contrast) and adjust the `_config.yml` to use with [Github Pages](https://pages.github.com/) and your page is done.
+* Extending and improving [SciPy's](https://scipy.org/) [FFT](https://en.wikipedia.org/wiki/Fast_Fourier_transform) libriary.
+* Writing a flexible and minimal-overhead [FFT](https://en.wikipedia.org/wiki/Fast_Fourier_transform) library binding that can be used in [Numba](https://numba.pydata.org/) just-in-time compiled code.
+* Making [Numba](https://numba.pydata.org/) aware of `scipy.fft` and `numpy.fft`.
+* Learning how to write Python bindings for existing C/C++ libraries using [C extensions](https://docs.python.org/3/extending/extending.html), [Cython](https://cython.org/), and [Pybind11](https://pybind11.readthedocs.io/en/latest/).
+* Write efficient algorithms beyond Big O, e.g. writing algorithms optimized for your hardware.
+* Compete with state of the art algorithms implemented in major libraries such as [SciPy](https://scipy.org/) or [Scikit-Learn](https://scikit-learn.org/). 
+* Piquing your curiosity about [Python](https://www.python.org/) by explaining fascinating, hardly documented or undocumented features and pecularities.
 
-## Features
+Most of these codes exist already and are gathering dust on my hard drive. It's time to give something back to the open source community. 
 
- - supports dark mode on macOS Mojave
- - optional sidebar
- - MathJax support
- - no external ressources
- - included archive page
- - supports pagination
- - feed generation
- - responsive
- - syntax highlighting
- - supports comments via [disqus](https://disqus.com/) or [isso](http://posativ.org/isso/)
-
-## Based on
-
-- [Hyde](https://github.com/poole/hyde)
-- [Minima](https://github.com/jekyll/minima)
-- [Lagrange](https://github.com/LeNPaul/Lagrange)
-- [Font Awesome](http://fontawesome.io/)
-- [KaTeX](https://katex.org/)
-- [Pygments](https://github.com/richleland/pygments-css)
-
-## Installation (jekyll-remote-theme method)
-
-You can use this theme with the `jekyll-remote-theme` plugin. Just create an empty repo, copy over the `index.html` file and add this to your `_config.yml`:
-
-```yaml
-remote_theme: niklasbuschmann/contrast@v2.11
-
-plugins:
-  - jekyll-remote-theme
-```
-
-Note: to enable icons you also need to copy over the `_data` folder.
-
-## Config
-
-Your `_config.yml` could for example look like this:
-
-```yaml
-title: "Blog Title"
-author: "Blog Author"
-description: "My personal blog about ... something"
-permalink: /:title/
-lang: "en"
-excerpt_separator: "\n\n\n"
-date_format: "%B %d, %Y"
-
-# Layout
-
-show_excerpts: true        # show article excerpts on the home page
-show_frame: true           # adds a gray frame to the site
-show_sidebar: false        # show a sidebar instead of the usual header
-
-# Menu
-
-navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {file: "index.html"}
-  - {file: "README.md"}
-
-external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
-  - {title: Mail, icon: envelope, url: "mailto:niklasbuschmann@users.noreply.github.com"}
-  - {title: Github, icon: github, url: "https://github.com/niklasbuschmann/contrast"}
-  - {title: Subscribe, icon: rss, url: "/feed.xml"}
-
-comments:
-#  disqus_shortname: ""    # see https://disqus.com/
-#  isso_domain: ""         # see https://posativ.org/isso/
-
-plugins:
- - jekyll-feed
-
-```
-
-## MathJax
-
-Contrast comes preinstalled with a leightweight alternative to MathJax called [KaTeX](https://katex.org/). To display equations in a post simply set `mathjax: true` in the article's front matter.
-
-## License
-
-[public domain](http://unlicense.org/)
-
-## Screenshots
-
-![screenshot](https://user-images.githubusercontent.com/4943215/109431850-cd711780-7a08-11eb-8601-2763f2ee6bb4.png)
-
-![screenshot](https://user-images.githubusercontent.com/4943215/109431832-b6cac080-7a08-11eb-9c5e-a058680c23a1.png)
-
-![screenshot](https://user-images.githubusercontent.com/4943215/73125194-5f0b8b80-3fa4-11ea-805c-8387187503ad.png)
+See you in the [blog section](https://styfenschaer.github.io/)!
