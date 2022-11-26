@@ -3,7 +3,7 @@ title: >-
   Why your choice of variable names can slow down your program — a deep dive
   into Python
 layout: post
-published: false
+published: true
 ---
 
 # Why your choice of variable names can slow down your program - a deep dive into Python
