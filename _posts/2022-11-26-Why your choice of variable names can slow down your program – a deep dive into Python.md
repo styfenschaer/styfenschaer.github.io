@@ -18,7 +18,7 @@ only marginal.
 The reason I am still writing this article is that all the other articles or posts have only dealt with "normal" global and local variables. 
 In this article, we will revisit this question for a special type of variable, the *class attribute*.
 
->If you are interested in the solution but not the way to get there, you can read only the highlighted sections and the conclusion at the very end.
+>If you are interested in the solution to this question but not the way to get there, you can read only the highlighted sections and the conclusion at the very end.
 
 ## Class attributes
 A class attribute is a variable that is bound directly to a class and not to an instance of that class. 
