@@ -28,12 +28,12 @@ Changing an instance attribute does not affect the class or other instances of t
 The reason that I am pointing this out is that Python internally treats class and instance attributes very differently. 
 
 An example of a class with a class attribute would be:
-{% highlight python %}
+```python
 class MyBlog:
     post = 'Hello world!'
 
 myblog = MyBlog()
-{% endhighlight %}
+```
 We can access the `post` attribute directly from the class itself using `MyBlog.post`, or we can first create an instance of the class and access it like `myblog.post`. 
 In both cases, we are accessing the shared class attribute and yet these cases are handled quite differently internally. 
 However, because the conclustion of this article would be similar in both cases, we look at the simpler case, the access on the class. 
