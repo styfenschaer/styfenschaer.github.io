@@ -6,7 +6,7 @@ published: true
 ---
 Hi there. 
 
-I am a PhD student and am grateful to be working at the intersection of engineering, statistics, computer science, and machine learning. 
+I am a PhD student and I am grateful to be working at the intersection of engineering, statistics, computer science, and machine learning. 
 In this blog, I will mainly share with you my enthusiasm for programming and algorithms. 
 I will be mindful that most of what we'll be doing has a high carryover for your projects. 
 No explanations with oversimplified examples. No tutorials of stuff that hundreds of people have already explained much better than I ever could. Unfortunately, this also means that this blog is mainly aimed at advanced programmers. 
