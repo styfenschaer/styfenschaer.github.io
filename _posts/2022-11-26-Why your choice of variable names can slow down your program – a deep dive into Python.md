@@ -64,7 +64,7 @@ The function takes two arguments, the first one `PyTypeObject *type` is the type
 The second argument `PyObject *name` is the name of the attribute we want to retrieve, in our case the variable `post`.
 We see that every time we look up an attribute, Python first looks for it in the type's *metatype*<sup>[[2]](#2)</sup> before checking the type itself. 
 In both cases, however, `_PyType_Lookup` is called, which implements the actual attribute lookup.
-```C
+```c
 // cpython/Objects/typeobject.c (lino 4258)
 
 static PyObject *
@@ -82,7 +82,7 @@ type_getattro(PyTypeObject *type, PyObject *name)
 ```
 The following code shows parts of the `_PyType_Lookup` implementation. 
 These three lines of code in the function body already give us a lot of information about what might have caused the doubling of the lookup time when the attribute name is long. Or should I say the halving when the attribute name is short?
-```C
+```c
 // cpython/Objects/typeobject.c (lino 4176)
 
 PyObject *
@@ -116,7 +116,7 @@ Otherwise, it would be unsafe because it eventually leads to bad memory access.
 
 ## Type cache and hash function
 Let's go a step further and see how Python implements this type-cache and hash function. The relevant code is shown below.
-```C
+```c
 // cpython/Objects/typeobject.c (lino 34)
 
 #define MCACHE_SIZE_EXP 12 // cpython/Include/internal/pycore_typeobject.h (lino 29)
@@ -143,7 +143,7 @@ And with this, we have found a hard threshold where the attribute lookup time in
 Remember when I told you at the beginning that a short variable name is no guarantee that the lookup will be fast?
 If we go back to `_PyType_Lookup` and look at another part of the function (see code below), we find that if the attribute is not found in the cache, Python uses the macro `MCACHE_CACHEABLE_NAME` to check if it can be cached for the future. If the answer is yes, the attribute is added to the cache. 
 Note that `assign_version_tag` checks if `type` is a valid Python object and has a `tp_version_tag` field. The `tp_version_tag` field is the actual type information used to compute the hash in `MCACHE_HASH` (code above).
-```C
+```c
 // cpython/Objects/typeobject.c (lino 4176)
 
 PyObject *
@@ -175,7 +175,7 @@ In this scenario, the attribute lookup becomes slow even if as few as two class 
 ## Forcing hash collisions
 To demonstrate this concept of a hash collision, I wrote a small C extension module<sup>[[3]](#3)</sup> with a function `compute_hash` that takes a Python type and attribute name in the form of a Python string and returns the corresponding hash using Python's own hash function `MCACHE_HASH_METHOD`. 
 The hash is returned as a Python integer.
-```C
+```c
 static PyObject *compute_hash(PyObject *self, PyObject *args)
 {
     PyTypeObject *type = PyTuple_GetItem(args, 0);
