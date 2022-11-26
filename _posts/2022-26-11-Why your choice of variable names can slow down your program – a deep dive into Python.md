@@ -48,7 +48,7 @@ We see a clear discontinuity from 64 to 128 characters, where the lookup time al
 This is already a very interesting observation and was very unexpected for me. If you are as surprised as I was, then I would like to pique your curiosity even more.
 In this article, we will see that sometimes, even if the length of our class attribute names are shorter than 64 characters, we may still have to spend 45 ns on the lookup.
 
-![](/assets/images/boxplot_attrlen_vs_lookuptime_light.png))
+![](/assets/images/boxplot_attrlen_vs_lookuptime_light.png)
 
 ## CPython
 To understand why we end up being penalized for our choice of attribute names, we need to take a look at how Python implements types, more specifically, how CPython 3.11 implements types. 
